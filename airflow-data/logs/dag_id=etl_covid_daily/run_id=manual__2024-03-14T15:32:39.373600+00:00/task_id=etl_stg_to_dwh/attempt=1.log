@@ -1,0 +1,23 @@
+[2024-03-14 15:32:43,873] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_covid_daily.etl_stg_to_dwh manual__2024-03-14T15:32:39.373600+00:00 [queued]>
+[2024-03-14 15:32:43,890] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_covid_daily.etl_stg_to_dwh manual__2024-03-14T15:32:39.373600+00:00 [queued]>
+[2024-03-14 15:32:43,890] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-14 15:32:43,890] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-03-14 15:32:43,890] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-14 15:32:43,901] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): etl_stg_to_dwh> on 2024-03-14 15:32:39.373600+00:00
+[2024-03-14 15:32:43,913] {standard_task_runner.py:52} INFO - Started process 8325 to run task
+[2024-03-14 15:32:43,916] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'etl_covid_daily', 'etl_stg_to_dwh', 'manual__2024-03-14T15:32:39.373600+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/etl_covid_daily.py', '--cfg-path', '/tmp/tmp0kx1na06', '--error-file', '/tmp/tmpscgbmxyr']
+[2024-03-14 15:32:43,918] {standard_task_runner.py:80} INFO - Job 29: Subtask etl_stg_to_dwh
+[2024-03-14 15:32:43,983] {task_command.py:369} INFO - Running <TaskInstance: etl_covid_daily.etl_stg_to_dwh manual__2024-03-14T15:32:39.373600+00:00 [running]> on host 3751c7bf410e
+[2024-03-14 15:32:44,037] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=etl_covid_daily
+AIRFLOW_CTX_TASK_ID=etl_stg_to_dwh
+AIRFLOW_CTX_EXECUTION_DATE=2024-03-14T15:32:39.373600+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-03-14T15:32:39.373600+00:00
+[2024-03-14 15:32:44,147] {python.py:173} INFO - Done. Returned value was: 512
+[2024-03-14 15:32:44,175] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=etl_covid_daily, task_id=etl_stg_to_dwh, execution_date=20240314T153239, start_date=20240314T153243, end_date=20240314T153244
+[2024-03-14 15:32:44,227] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-03-14 15:32:44,276] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
