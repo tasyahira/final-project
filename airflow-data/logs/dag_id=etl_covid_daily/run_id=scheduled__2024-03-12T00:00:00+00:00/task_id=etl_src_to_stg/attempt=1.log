@@ -1,0 +1,24 @@
+[2024-03-14 15:27:07,497] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_covid_daily.etl_src_to_stg scheduled__2024-03-12T00:00:00+00:00 [queued]>
+[2024-03-14 15:27:07,547] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_covid_daily.etl_src_to_stg scheduled__2024-03-12T00:00:00+00:00 [queued]>
+[2024-03-14 15:27:07,550] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-14 15:27:07,553] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-03-14 15:27:07,561] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-14 15:27:07,612] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): etl_src_to_stg> on 2024-03-12 00:00:00+00:00
+[2024-03-14 15:27:07,636] {standard_task_runner.py:52} INFO - Started process 8136 to run task
+[2024-03-14 15:27:07,639] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'etl_covid_daily', 'etl_src_to_stg', 'scheduled__2024-03-12T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/etl_covid_daily.py', '--cfg-path', '/tmp/tmpcuyivqw2', '--error-file', '/tmp/tmp1q3hfxr4']
+[2024-03-14 15:27:07,657] {standard_task_runner.py:80} INFO - Job 13: Subtask etl_src_to_stg
+[2024-03-14 15:27:07,756] {logging_mixin.py:115} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/configuration.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-03-14 15:27:07,987] {task_command.py:369} INFO - Running <TaskInstance: etl_covid_daily.etl_src_to_stg scheduled__2024-03-12T00:00:00+00:00 [running]> on host 3751c7bf410e
+[2024-03-14 15:27:08,553] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=etl_covid_daily
+AIRFLOW_CTX_TASK_ID=etl_src_to_stg
+AIRFLOW_CTX_EXECUTION_DATE=2024-03-12T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-03-12T00:00:00+00:00
+[2024-03-14 15:27:08,873] {python.py:173} INFO - Done. Returned value was: 512
+[2024-03-14 15:27:08,948] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=etl_covid_daily, task_id=etl_src_to_stg, execution_date=20240312T000000, start_date=20240314T152707, end_date=20240314T152708
+[2024-03-14 15:27:09,015] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-03-14 15:27:09,084] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
