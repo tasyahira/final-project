@@ -30,9 +30,9 @@ try:
 
     # Define 5 MySQL queries
     mysql_queries = [
-        "select distinct kode_prov as province_id, nama_prov  as province_name from covid_data;",
-        "select distinct kode_kab as distrcit_id , kode_prov as province_id, nama_kab as district_name from covid_data;" 
-        # "SELECT * FROM table3;",
+        "select distinct kode_prov, nama_prov from covid_data;",
+        "select distinct kode_kab, kode_prov, nama_kab from covid_data;",
+        "select ROW_NUMBER() OVER(ORDER BY status,detail), kode_prov, nama_prov, kode_kab, nama_kab, tanggal, status, detail, total from case_details where detail in ('dikarantina', 'discarded', 'meninggal', 'diisolasi');",
         # "SELECT * FROM table4;",
         # "SELECT * FROM table5;"
     ]
@@ -52,8 +52,8 @@ try:
     # Define 5 PostgreSQL INSERT queries
     postgresql_queries = [
         "INSERT INTO dim_province (province_id, province_name) VALUES (%s, %s);",
-        "INSERT INTO dim_district (district_id, province_id, district_name) VALUES (%s, %s, %s);"
-        # "INSERT INTO table3 (column1, column2) VALUES (%s, %s);",
+        "INSERT INTO dim_district (district_id, province_id, district_name) VALUES (%s, %s, %s);",
+        "INSERT INTO case_details (id, province_id, province_name, district_id, district_name, case_date, status_name, status_detail, total) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s);",
         # "INSERT INTO table4 (column1, column2) VALUES (%s, %s);",
         # "INSERT INTO table5 (column1, column2) VALUES (%s, %s);"
     ]
